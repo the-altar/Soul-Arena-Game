@@ -1,0 +1,101 @@
+$midday-red: #a53418;
+$midday-orange: #ff754fc4;
+$midday-yellow: #ffcd02;
+.midday {
+  color: #fafafa;
+  &-option {
+    background-color: rgba($color: $midday-red, $alpha: 0.5);
+  }
+  &-lighter {
+    background-color: rgba($color: $midday-red, $alpha: 0.3);
+  }
+  &-glow {
+    background-color: $midday-orange;
+    box-shadow: 0 0 5px 2px $midday-orange;
+  }
+  &-shard {
+    background: $midday-red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $midday-red, $midday-orange);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $midday-red, $midday-orange);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid $midday-red;
+  }
+  &-default {
+    background: $midday-red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $midday-red, $midday-orange);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $midday-red, $midday-orange);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &-fancy {
+    background: $midday-red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $midday-red, $midday-orange);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $midday-red, $midday-orange);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: 1px solid rgba($color: #fafafa, $alpha: 0.1);
+    box-shadow: 0 0 2px 2px rgba($color: $midday-orange, $alpha: 0.3);
+  }
+  &-darker {
+    background: $midday-red; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      $midday-yellow,
+      $midday-orange,
+      $midday-red
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      $midday-yellow,
+      $midday-orange,
+      $midday-red
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid $midday-orange;
+  }
+  &-status {
+    display: inline-block;
+    background: $midday-red; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      $midday-orange,
+      $midday-red
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      $midday-orange,
+      $midday-red
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: $midday-orange, $alpha: 0.3);
+    border: 1px solid $midday-orange;
+  }
+  &-skillbar {
+    border: 1px solid $midday-red;
+    background-color: rgba($color: $midday-orange, $alpha: 0.3);
+    box-shadow: 1px 1px 2px 2px rgba($color: $midday-orange, $alpha: 0.3);
+  }
+  &-skill {
+    background: $midday-red; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      $midday-orange,
+      $midday-red
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      $midday-orange,
+      $midday-red
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: $midday-orange, $alpha: 0.3);
+    border: 1px solid $midday-orange;
+  }
+  &-view {
+    background-color: rgba($color: #3f3f3f, $alpha: 0.9);
+    border-top: 3px solid $midday-orange;
+    border-bottom: 3px solid $midday-orange;
+  }
+}

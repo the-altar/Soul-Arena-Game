@@ -1,0 +1,106 @@
+.midnight {
+  color: #fafafa;
+  &-option {
+    background-color: rgba(78, 130, 151, 0.479);
+  }
+  &-lighter {
+    background-color: rgba($color: #2980b9, $alpha: 0.3);
+  }
+
+  &-glow {
+    background-color: #74c8ff;
+    box-shadow: 0 0 5px 2px #74c8ff;
+  }
+
+  &-shard {
+    background: #2980b9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2c3e50, #2980b9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid #2980b9;
+  }
+
+  &-default {
+    background: #2980b9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2c3e50, #2980b9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &-fancy {
+    background: #2980b9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2c3e50, #2980b9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: 1px solid rgba($color: #fafafa, $alpha: 0.1);
+    box-shadow: 0 0 2px 2px rgba($color: #2980b9, $alpha: 0.3);
+  }
+
+  &-darker {
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid #2c5364;
+  }
+  &-status {
+    display: inline-block;
+    background: #2c3e50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      #4ca1af,
+      #2c3e50
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #4ca1af,
+      #2c3e50
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: #4ca1af, $alpha: 0.3);
+    border: 1px solid #4ca1af;
+  }
+
+  &-skillbar {
+    border: 1px solid #2c3e50;
+    background-color: rgba($color: #4ca1af, $alpha: 0.3);
+    box-shadow: 1px 1px 2px 2px rgba($color: #4ca1af, $alpha: 0.3);
+  }
+
+  &-skill {
+    background: #2c3e50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #4ca1af,
+      #2c3e50
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #4ca1af,
+      #2c3e50
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: #4ca1af, $alpha: 0.3);
+    border: 1px solid #4ca1af;
+  }
+
+  &-view {
+    background-color: rgba($color: #2b2b2b, $alpha: 0.9);
+    border-top: 3px solid rgb(20, 120, 133);
+    border-bottom: 3px solid rgb(20, 120, 133);
+  }
+}

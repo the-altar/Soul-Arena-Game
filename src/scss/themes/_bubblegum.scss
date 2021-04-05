@@ -1,0 +1,102 @@
+$bubblegum-pink: #ff1cb3;
+$bubblegum-blue:rgb(41, 241, 255);
+$bubblegum-green: #3dffae;
+$bubblegum-yellow: #f9ff94;
+.bubblegum {
+  color: #fafafa;
+  &-option {
+    background-color: rgba($color: $bubblegum-pink, $alpha: 0.5);
+  }
+  &-lighter {
+    background-color: rgba($color: $bubblegum-green, $alpha: 0.3);
+  }
+  &-glow {
+    background-color: $bubblegum-green;
+    box-shadow: 0 0 5px 2px $bubblegum-green;
+  }
+  &-shard {
+    background: $bubblegum-pink;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $bubblegum-pink, $bubblegum-green);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $bubblegum-pink, $bubblegum-green);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid $bubblegum-pink;
+  }
+  &-default {
+    background: $bubblegum-pink;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, $bubblegum-pink, $bubblegum-green);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, $bubblegum-pink, $bubblegum-green);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &-fancy {
+    background: $bubblegum-pink;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, $bubblegum-pink, $bubblegum-green);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, $bubblegum-pink, $bubblegum-green);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: 1px solid rgba($color: #fafafa, $alpha: 0.1);
+    box-shadow: 0 0 2px 2px rgba($color: $bubblegum-pink, $alpha: 0.3);
+  }
+  &-darker {
+    background: $bubblegum-pink; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      $bubblegum-yellow,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      $bubblegum-yellow,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid $bubblegum-green;
+  }
+  &-status {
+    display: inline-block;
+    background: $bubblegum-pink; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: $bubblegum-green, $alpha: 0.3);
+    border: 1px solid $bubblegum-green;
+  }
+  &-skillbar {
+    border: 1px solid $bubblegum-pink;
+    background-color: rgba($color: $bubblegum-green, $alpha: 0.3);
+    box-shadow: 1px 1px 2px 2px rgba($color: $bubblegum-green, $alpha: 0.3);
+  }
+  &-skill {
+    background: $bubblegum-pink; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      $bubblegum-green,
+      $bubblegum-pink
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 1px 1px 2px 2px rgba($color: $bubblegum-green, $alpha: 0.3);
+    border: 1px solid $bubblegum-green;
+  }
+  &-view {
+    background-color: rgba($color: #2b2b2b, $alpha: 0.9);
+    border-top: 3px solid $bubblegum-green;
+    border-bottom: 3px solid $bubblegum-green;
+  }
+}

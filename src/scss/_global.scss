@@ -1,0 +1,68 @@
+$colors: (
+  Bug: #7dd11f,
+  Dark: #5b5462,
+  Dragon: #423acb,
+  Electric: #e9ed37,
+  Fairy: #fc5fe5,
+  Fighting: #da0f57,
+  Fire: #fbad35,
+  Flying: #a7abee,
+  Ghost: #6f49be,
+  Grass: #34d156,
+  Ground: #dc7c3f,
+  Ice: #66d7c2,
+  Normal: #9ea29d,
+  Poison: #c500d0,
+  Psychic: #ff7a78,
+  Rock: #c4c485,
+  Steel: #5492a4,
+  Water: #6386e3,
+);
+
+@each $colorKey, $colorValue in $colors {
+  .#{$colorKey}--text {
+    color: $colorValue !important;
+  }
+}
+
+$energies: (
+  Hakuda: #727272,
+  Kidou: #027add,
+  Reiryoku: #fdc200f8,
+  Zanpakutou: #c91a03,
+  Random: #141414,
+);
+
+@each $energy, $hexColor in $energies {
+  .#{$energy} {
+    background-color: $hexColor;
+  }
+
+  .#{$energy}-glow {
+    box-shadow: 0 0 1px 1px $hexColor;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 550px;
+  @media (min-width: 775px) {
+    overflow-x: hidden;
+  }
+  @media (min-height: 500px) {
+    overflow-y: hidden;
+  }
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-col {
+    flex-direction: column;
+  }
+}

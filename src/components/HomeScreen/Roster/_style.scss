@@ -1,0 +1,114 @@
+@mixin checkers($size: 40px, $contrast: 0.07) {
+  $checkerColor: rgba(#000, $contrast);
+  $angle: 45deg;
+  $tp: 25%;
+  background-image: linear-gradient($angle, $checkerColor $tp, transparent $tp),
+    linear-gradient(-$angle, $checkerColor $tp, transparent $tp),
+    linear-gradient($angle, transparent 3 * $tp, $checkerColor 3 * $tp),
+    linear-gradient(-$angle, transparent 3 * $tp, $checkerColor 3 * $tp);
+  background-size: $size $size;
+  background-position: 0 0, 0 $size/2, $size/2 -1 * $size/2, -1 * $size/2 0;
+}
+
+.roster {
+  height: 42%;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 75px;
+  &__icon {
+    width: 55px;
+    height: 55px;
+    margin: 3px;
+    text-align: center;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    img {
+      width: 50px;
+      margin: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    &-next {
+      width: 20px;
+      fill: #fafafa;
+      margin: 0 1rem 0 1rem;
+
+      &-reverse {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-points {
+    margin: 0;
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+  }
+
+  &-faded {
+    opacity: 0.5;
+  }
+
+  &-empty {
+    color: #2c3e50 !important;
+  }
+}
+
+.deco {
+  width: 30px;
+  position: absolute;
+  opacity: 0.4;
+  &-top-left {
+    top: -5px;
+    left: -5px;
+  }
+
+  &-btm-left {
+    bottom: -5px;
+    left: -5px;
+  }
+
+  &-btm-rght {
+    bottom: -5px;
+    right: -5px;
+  }
+
+  &-top-rght {
+    top: -5px;
+    right: -5px;
+  }
+}

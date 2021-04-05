@@ -1,0 +1,122 @@
+@mixin checkers($size: 40px, $contrast: 0.07) {
+    $checkerColor: rgba(#000, $contrast);
+    $angle: 45deg;
+    $tp: 25%;
+    background-image: linear-gradient($angle, $checkerColor $tp, transparent $tp),
+        linear-gradient(-$angle, $checkerColor $tp, transparent $tp),
+        linear-gradient($angle, transparent 3 * $tp, $checkerColor 3 * $tp),
+        linear-gradient(-$angle, transparent 3 * $tp, $checkerColor 3 * $tp);
+    background-size: $size $size;
+    background-position: 0 0, 0 $size/2, $size/2 -1 * $size/2, -1 * $size/2 0;
+}
+
+.lobby {
+    color: #fafafa;
+    @include checkers(5px, 0.2);
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    display: flex;
+    justify-content: space-between;
+
+    &-members {
+        width: 25%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &-header{
+        margin: 0.5rem 0 0.5rem 0;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        font-size: 1rem;
+        background-color: yellowgreen;
+    }
+
+    &-member {
+        height: 2.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2b2b2b;
+        margin-bottom: 0.2rem;
+        &-name {
+            width: 60%;
+            font-size: 0.8rem;
+        }
+    }
+
+    &-avatar {
+        border-radius: 20%;
+        margin-right: 1rem;
+        &-mini {
+            height: 22px;
+            width: 22px;
+        }
+    }
+
+    &-chat {
+        width: 70%;
+        height: 100%;
+        margin: 0 1rem 0 1rem;
+        &-message{
+            margin-bottom: 5px;
+            &-sender {
+                margin: 0;
+                background-color: chocolate;
+                font-size: 0.8rem;
+                display: inline-block;
+                height: 0.7rem;
+                line-height: 0.7rem;
+                padding: 5px;
+            }
+            &-content{
+                margin: 0;
+                padding: 3px 10px 3px 10px;
+                background-color: #2b2b2b;
+                font-size: 0.8rem;
+                word-wrap: break-word;
+            }
+        }
+
+        &-view {
+            width: 100%;
+            height: 85%;
+            overflow: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            background-color: rgba($color: #2b2b2b, $alpha: 0.65);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &-textbox {
+            width: 100%;
+            height: 15%;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-input {
+                color: #fafafa;
+                width: 100%;
+                height: 65%;
+                border: none;
+                background-color: rgba($color: #2b2b2b, $alpha: 0.65);
+                border-radius: 20px;
+                padding: 10px 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    &-btn {
+        width: 3rem;
+        height: 2rem;
+        border: none;
+        border-radius: 20px;
+        margin: 1rem;
+        background-color: #fafafa;
+    }
+}
